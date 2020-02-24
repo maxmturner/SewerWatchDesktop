@@ -8,8 +8,11 @@ image: node:12.13.1
 pipelines:
   default:
     - step:
+        deployment: test
         caches:
           - node
         script: # Modify the commands below to build your repository.
           - npm install
           - npm run dist
+          - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/dist" --form files=@"SewerWatchDesktop-0.0.1.dmg" "SewerWatchDesktop Setup 0.0.1.exe" "SewerWatchDesktop-0.0.1.AppImage"
+          
