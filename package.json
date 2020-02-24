@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "publish": "electron-builder"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
