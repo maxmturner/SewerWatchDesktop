@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--4.1.3-->
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Sewer Watch</title>
+
+        <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/Chart.min.css"/>
+        <link rel="stylesheet" href="css/app.css"/>
+        
+        
+    </head>
+    
+    <body class="full-height background">
+        <!-- Top Nav bar  -->
+        <nav class="navbar navbar-expand-lg navbar-dark eastech-blue">
+            <a class="navbar-brand" href="#">
+                <img src="images/sw-logo.png">
+                iTracker Sewer Watch
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="homeLiveLink" class="nav-link" href="#live">Live Data</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#logs">Logs</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#analytics">Analytics</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#settings">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Alerts -->
+        <div id="dangerAlert" class="alert alert-danger collapse sticky-top" role="alert"></div>
+
+        <!-- Status Modal -->
+        <div class="modal fade" id="statusModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h2 class="text-center" id="statusLabel"></h2>
+                  <div class="text-center">
+                    <div id="statusSpinner" class="spinner-border text-eastech-blue d-none" role="status" aria-hidden="false"></div>
+                    <div id="statusDone" class="d-none">
+                        <img src="images/check.png"/>
+                    </div>
+                    <div id="statusFailed" class="d-none">
+                        <img src="images/x.png" />
+                    </div>
+                    <h5 class="text-center" id="statusDesc"></h5>
+                    <div id="reloadButton" class="d-none">
+                      <button class="btn btn-blue btn-lg mt-2 mb-2">Refresh</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Battery Modal -->
+        <!-- <div class="modal fade" id="batteryModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h2 class="text-center">Reset Battery?</h2>
+                  <h5 class="text-center" id="statusDesc">It looks like this iTracker was powered off and back on. If the batteries were replaced, then they need to be reset in order to show an accurate battery level.</h5>
+                  <div id="batterySpinner" class="spinner-border text-eastech-blue d-none" role="status" aria-hidden="false"></div>
+                    <div id="batteryDone" class="d-none">
+                        <img src="check.png"/>
+                    </div>
+                  <div class="text-right">
+                    <button class="btn btn-light btn-lg" data-dismiss="modal">Close</button>
+                    <button class="btn btn-blue btn-lg mx-2" id="indexResetBattery">Reset</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+        </div> -->
+        
+        <!-- App content -->
+        <div id="app" class="background">
+
+        </div>
+
+        <!-- Libraries -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/Chart.bundle.min.js"></script>
+        
+        <!-- Router for page navigation -->
+        <script src="js/route.js"></script>
+        <script src="js/router.js"></script>
+
+        <!-- Main app javascript -->
+        <script src="js/app.js"></script>
+
+        <!--Page specific javascript -->
+        <script src="js/live.js"></script>
+        <script src="js/logs.js"></script>
+        <script src="js/analytics.js"></script>
+        <script src="js/settings.js"></script>
+
+        <!-- <script src="js/full-app.js"></script> -->
+    </body>
+</html>

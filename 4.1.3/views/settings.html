@@ -1,0 +1,175 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="container mt-2">
+            <div class="col-12">
+                    <h2 class="text-light">Settings</h5>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-2 mb-2">
+        <div class="col-12">
+            <div class="container background-secondary">
+                <div class="row">
+                    <div class="col-12">
+                        <form class="mt-2 mb-2">
+                            <div class="form-group">
+                                <label for="siteName" class="text-light">Site Name</label>
+                                <input type="text" class="form-control form-control-lg" id="siteName">
+                            </div>
+                            <div class="form-group">
+                                <label for="households" class="text-light">Households</label>
+                                <input type="text" class="form-control form-control-lg" id="households">
+                            </div>
+                            <div class="form-group">
+                                <label for="pipeID" class="text-light">Pipe Size</label>
+                                <input type="text" class="form-control form-control-lg" id="pipeID">
+                            </div>   
+                            <div class="form-group">
+                                <label for="damping" class="text-light">Damping</label>
+                                <select id="damping" class="form-control form-control-lg">
+                                    <option selected>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                </select>
+                            </div>       
+                            <div class="form-group">
+                                <label for="logInterval" class="text-light">Log Interval</label>
+                                <select id="logInterval" class="form-control form-control-lg">
+                                    <option selected>1</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>30</option>
+                                    <option>60</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="units" class="text-light">Units of Measure</label>
+                                <select id="units" class="form-control form-control-lg">
+                                    <option selected>English</option>
+                                    <option>Metric</option>
+                                </select>
+                            </div>  
+                            <div class="form-group">
+                                <label for="wifiWakeUp" class="text-light">WiFi Wake Up</label>
+                                <select id="wifiWakeUp" class="form-control form-control-lg">
+                                    <option value=0 selected>Off</option>
+                                    <option value=1 >On</option>
+                                </select>
+                            </div>     
+                            <button id="saveSettings" type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mb-2">
+                        <div class="card background settings-tile-lg">
+                            <h4 class="card-title text-light text-center mt-2">Set Level</h4>
+                            <div class="card-body text-center">
+                                <input type="text" class="form-control" id="levelInput">
+                                <button class="btn btn-blue btn-lg mt-2 mb-2" id="setLevelButton" data-toggle="modal" data-target="#confirmationModal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-2">
+                        <div class="card background settings-tile-lg">
+                            <h4 class="card-title text-light text-center mt-2">Date/Time</h4>
+                            <div class="card-body text-center">
+                                <h5 class="text-light text-center" id="dateLabel">1/14/2020 12:34</h5>
+                                <button class="btn btn-blue btn-lg" id="syncTimeButton" data-toggle="modal" data-target="#confirmationModal">Sync Time</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mb-2">
+                        <div class="card background settings-tile-lg">
+                            <h4 class="card-title text-light text-center mt-2">Battery</h4>
+                            <div class="card-body text-center">
+                                <h5 class="text-light text-center" id="batteryLabel">100%</h5>
+                                <button class="btn btn-blue btn-lg" id="resetBatteryButton" data-toggle="modal" data-target="#confirmationModal">Reset Battery</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-2">
+                        <a id="newSiteButton" data-toggle="modal" data-target="#confirmationModal">
+                            <div class="card background settings-tile-lg">
+                                <h4 class="card-title text-light text-center mt-2">New Site</h4>
+                                <div class="card-body text-center">
+                                    <img src="images/home.png" class="mx-auto"/>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mb-2">
+                        <div class="card background settings-tile-lg">
+                            <h4 class="card-title text-light text-center mt-2">WiFi SSID</h4>
+                            <div class="card-body text-center">
+                                <input type="text" class="form-control" id="ssidInput">
+                                <button class="btn btn-blue btn-lg mt-2 mb-2" id="ssidButton" data-toggle="modal" data-target="#confirmationModal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-2">
+                        <div class="card background settings-tile-lg">
+                            <h4 class="card-title text-light text-center mt-2">Admin Command</h4>
+                            <div class="card-body text-center">
+                                <input type="text" class="form-control" id="adminCommandInput">
+                                <button class="btn btn-blue btn-lg mt-2 mb-2" id="adminCommandButton" data-toggle="modal" data-target="#confirmationModal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2 mb-2">
+                    <div class="col-8 mx-auto">
+                        <h4 class="text-center text-light">Serial Number</h4>
+                        <h5 class="text-center text-light mb-2" id="serialNumber">00000000</h5>
+    
+                        <hr class="divider" />
+    
+                        <h4 class="text-center text-light">Firmware Version</h4>
+                        <h5 class="text-center text-light mb-2" id="firmwareLabel">0000</h5>
+    
+                        <hr class="divider" />
+    
+                        <h4 class="text-center text-light">Type</h4>
+                        <h5 class="text-center text-light mb-2" id=iTrackerType>Wifi Only</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+<!-- Confirmation Modals -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitleText" class="modal-title" id="exampleModalLabel"></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="modalDescText" class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button id="confirmButton" type="button" class="btn btn-primary" data-dismiss="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

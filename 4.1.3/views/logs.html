@@ -1,0 +1,136 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="container mt-2">
+            <div class="col-12">
+                    <h2 class="text-light">Logs</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="container background-secondary">
+            <div class="row mt-2">
+                <div class="col-12">
+                    <h2 id="LogsSiteName" class="text-center text-light">iTracker</h2>
+                    <hr class="divider" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center text-gray">Start Date</h3>
+                    <h2 id="LogsStartDate" class="text-center text-light"></h2>
+                    <hr class="divider" />
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center text-gray">Last Download</h3>
+                    <h2 id="LogsLastDate" class="text-center text-light"></h2>
+                    <hr class="divider" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center text-gray">Logged Results</h3>
+                    <h2 id="LogsLogResults" class="text-center text-light"></h2>
+                    <hr class="divider" />
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center text-gray">Log Interval</h3>
+                    <h2 id="LogsLogInterval" class="text-center text-light"></h2>
+                    <hr class="divider" />
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4 mb-3">
+                    <a id="downloadAll">
+                        <div class="card background logs-tile">
+                            <h3 class="card-title text-light text-center mt-2">Download All</h3>
+                            <div class="card-body text-center">
+                                <img src="images/download.png" class="mx-auto"></img>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <a id="downloadNew">
+                        <div class="card background logs-tile">
+                            <h3 class="card-title text-light text-center mt-2">Download New</h3>
+                            <div class="card-body text-center">
+                                <img src="images/download.png" class="mx-auto"></img>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <a data-toggle="modal" data-target="#sdModal">
+                        <div class="card background logs-tile">
+                            <h3 class="card-title text-light text-center mt-2">Write All To SD Card</h3>
+                            <div class="card-body text-center">
+                                <img src="images/sdcard.png" class="mx-auto"></img>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <hr class="divider" />
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <a data-toggle="modal" data-target="#confirmModal">
+                        <div class="card background logs-tile">
+                            <h3 class="card-title text-light text-center mt-2">Clear Logs</h3>
+                            <div class="card-body text-center">
+                                <img src="images/trash.png" class="mx-auto "></img>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Clear Logs</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to permanently delete all logs from the connected iTracker? 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button id="clearLogs" type="button" class="btn btn-danger" data-dismiss="modal">Clear Logs</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sdModal" tabindex="-1" role="dialog" aria-labelledby="sdModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">SD Card</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Preparing to write all logs to SD Card.</h6>
+                <h6>Please make sure the SD Card is inserted into the iTracker and do not remove until writing is complete.</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button id="writeSD" type="button" class="btn btn-primary" data-dismiss="modal">Write to SD Card</button>
+            </div>
+        </div>
+    </div>
+</div>
