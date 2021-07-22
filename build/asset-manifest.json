@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "./static/css/main.31465161.chunk.css",
+    "main.js": "./static/js/main.1b38be8a.chunk.js",
+    "main.js.map": "./static/js/main.1b38be8a.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.d72691ad.js",
+    "runtime-main.js.map": "./static/js/runtime-main.d72691ad.js.map",
+    "static/css/2.de424728.chunk.css": "./static/css/2.de424728.chunk.css",
+    "static/js/2.0cb63477.chunk.js": "./static/js/2.0cb63477.chunk.js",
+    "static/js/2.0cb63477.chunk.js.map": "./static/js/2.0cb63477.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.ddb67a1bee24b433c49870832b69ae83.js": "./precache-manifest.ddb67a1bee24b433c49870832b69ae83.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "./static/css/2.de424728.chunk.css.map",
+    "static/css/main.31465161.chunk.css.map": "./static/css/main.31465161.chunk.css.map",
+    "static/js/2.0cb63477.chunk.js.LICENSE.txt": "./static/js/2.0cb63477.chunk.js.LICENSE.txt",
+    "static/media/sw-logo-large.png": "./static/media/sw-logo-large.a5903801.png",
+    "static/media/sw-logo.png": "./static/media/sw-logo.dbaa7620.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d72691ad.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.0cb63477.chunk.js",
+    "static/css/main.31465161.chunk.css",
+    "static/js/main.1b38be8a.chunk.js"
+  ]
+}
